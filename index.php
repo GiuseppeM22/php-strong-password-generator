@@ -1,16 +1,9 @@
 <?php 
-
+$mail = $_GET['mail'];
 include './function.php';
 
-$mail = $_GET['mail'];
 
 $email = generaStringaRandom($mail);
-
-session_start();
-
-
-$_SESSION['email'] = $email;
-header ('Location: ./printer.php')
 
 ?>
 
@@ -25,11 +18,12 @@ header ('Location: ./printer.php')
 <body>
 
     <h2>Genera la tua password</h2>
-    <form action="index.php" method="get">
+    <form action="index.php">
         <input type="number" name="mail" id="mail" min="8" placeholder="inserisci un numero">
         <button type="submit">Invia</button>
     </form>
 
+    <h3>La password generata è:</h3>
     <p><?php echo $email ?></p>
 
 
