@@ -1,14 +1,12 @@
-<?php 
+<!-- <?php 
 
-include './function.php';
 
-$mail = $_GET['mail'];
+session_start();
 
-$email = generaStringaRandom($mail);
 
 ?>
 
 <h3>La password generata è:</h3>
-<p><?php echo $email ?></p>
+<p><?php echo $_SESSION['email'] ?></p>
 
-<a href="index.php">Cambia valori</a>
+<a href="index.php">Cambia valori</a> -->
