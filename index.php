@@ -4,7 +4,13 @@ include './function.php';
 
 $mail = $_GET['mail'];
 
-$email = generaStringaRandom($mail)
+$email = generaStringaRandom($mail);
+
+session_start();
+
+
+$_SESSION['email'] = $email;
+header ('Location: ./printer.php')
 
 ?>
 
@@ -24,7 +30,6 @@ $email = generaStringaRandom($mail)
         <button type="submit">Invia</button>
     </form>
 
-    <h3>La password generata è:</h3>
     <p><?php echo $email ?></p>
 
 
